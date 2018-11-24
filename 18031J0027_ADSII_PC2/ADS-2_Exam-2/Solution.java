@@ -3,36 +3,29 @@
 
     class Edge 
     {
-     	public String toString()
-     	{
-    		return  " "+v + "-" + u + "  " + (float)weight +"0000"+"  ";
+     	public String toString() {
+    		return  " "+v + "-" + w + "  " + (float)weight +"0000"+"  ";
     	}
-     int v; int u;
+     int v; int w;
      double weight;
-    public Edge(int v, int u, double weight)
+    public Edge(int v, int w, double weight)
     {
     this.v = v;
-    this.u = u;
+    this.w = w;
     this.weight = weight;
     }
     public int v()
-    { 
-    	return v;
-    }
+    { return v; }
     public int w()
-    { 
-    	return u;
-    }
+    { return w; }
     public double weight()
-    { 
-    	return  weight;
+    { return  weight; }
+
     }
-    }
-    
     class Graph
     {
-      int V,count=0;;
-      ArrayList<Edge>[] adj;
+     private int V,count=0;;
+     private ArrayList<Edge>[] adj;
      public Graph(int V)
      {
      this.V = V;
@@ -41,8 +34,7 @@
      adj[v] = new ArrayList<Edge>();
      }
      public void addEdge(int s,int d,double weight)
-     {
-    	 count++;
+     {count++;
     	  Edge e=new Edge(s,d,weight);
     	  Edge e1=new Edge(s,d,weight);
      int v = e.v();
@@ -52,9 +44,7 @@
      adj[x].add(e1);
      }
      public Iterable<Edge> adj(int v)
-     {
-    	 return adj[v];
-     }
+     { return adj[v]; }
      int V()
      {
     	  return V;
@@ -63,8 +53,7 @@
      {
     	System.out.println(V-1+" vertices "+count+" edges");
     	for(int i = 0;i<V-1;i++)
-    	{
-    		System.out.print(i +" :");
+    	{System.out.print(i +" :");
     		for(int j=adj[i].size()-1;j>=0;j--)
     		{
     			System.out.print(adj[i].get(j));
@@ -76,8 +65,7 @@
      }
     }
 
-    public class Solution 
-    {
+    public class Solution {
     	public static void main(String args[])
     	{
     		Scanner s=new Scanner(System.in);
@@ -100,10 +88,8 @@
     		case "Graph":
     			g.display();
     		break;
-    		case "DirectedPaths":
-    			break;
-    		case "ViaPaths":
-    			break;
+    		case "DirectedPaths":break;
+    		case "ViaPaths":break;
     		}
     	}
 
