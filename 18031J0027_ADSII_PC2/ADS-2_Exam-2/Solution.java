@@ -3,11 +3,12 @@
 
     class Edge 
     {
-     	public String toString() {
+    @Override
+    	public String toString() {
     		return  " "+v + "-" + w + "  " + (float)weight +"0000"+"  ";
     	}
-     int v; int w;
-     double weight;
+    public final int v; int w;
+    public final double weight;
     public Edge(int v, int w, double weight)
     {
     this.v = v;
