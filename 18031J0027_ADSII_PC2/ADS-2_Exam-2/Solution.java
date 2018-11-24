@@ -5,7 +5,7 @@
     {
     @Override
     	public String toString() {
-    		return  " "+v + "-" + w + "  " + (float)weight +"0000"+"  ";
+    		return  " "+v + "-" + w + " " + (float)weight +"0000"+"  ";
     	}
     public final int v; int w;
     public final double weight;
@@ -35,7 +35,8 @@
      adj[v] = new ArrayList<Edge>();
      }
      public void addEdge(int s,int d,double weight)
-     {count++;
+     {
+    	 count++;
     	  Edge e=new Edge(s,d,weight);
     	  Edge e1=new Edge(s,d,weight);
      int v = e.v();
@@ -54,7 +55,7 @@
      {
     	System.out.println(V-1+" vertices "+count+" edges");
     	for(int i = 0;i<V-1;i++)
-    	{System.out.print(i +" :");
+    	{System.out.print(i +":");
     		for(int j=adj[i].size()-1;j>=0;j--)
     		{
     			System.out.print(adj[i].get(j));
