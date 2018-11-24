@@ -5,7 +5,7 @@
     {
     @Override
     	public String toString() {
-    		return  " "+v + "-" + w + " " + (float)weight +"0000"+"  ";
+    		return  " "+v + "-" + w + " " + (float)weight +"0000"+" ";
     	}
     public final int v; int w;
     public final double weight;
